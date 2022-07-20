@@ -18,22 +18,28 @@ var previousVC = ToDoTableViewController()
     super.viewDidLoad()
 
   }
+    
+    @IBAction func addTapped(_ sender: Any) {
 
-  @IBAction func addTapped(_ sender: Any) {
-        let toDo = ToDo()
+      // we have to grab this view context to be able to work with Core Data
+      if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
+        // we are creating a new ToDoCD object here, naming it toDo
+        let toDo = ToDoCD(entity: ToDoCD.entity(), insertInto: context)
+
+        // if the titleTextField has text, we will call that text titleText
         if let titleText = titleTextField.text {
-          toDo.name = titleText
+            // we will take the titleText and assign that value to toDo.name
+            // this .name and .important came from the attributes you typed in on the Core Data page!
+            toDo.name = titleText
+            toDo.date = dateTextField.text
         }
-      
-        if let dateText = dateTextField.text {
-            toDo.date = dateText
-        }
-      
-      previousVC.toDos.append(toDo)
-      previousVC.tableView.reloadData()
-      navigationController?.popViewController(animated: true)
 
-}
+        try? context.save()
+
+        navigationController?.popViewController(animated: true)
+      }
+
+    }
     
 }

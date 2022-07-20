@@ -483,6 +483,9 @@
                                 <items>
                                     <barButtonItem title="Back" image="arrowshape.turn.up.backward.circle" catalog="system" id="0So-H8-Rty">
                                         <color key="tintColor" red="0.96078431610000004" green="0.74509805439999999" blue="0.70980393890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="ftR-Bj-0gi" kind="show" id="YFD-Jn-kKy"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="lmQ-xa-kzT"/>
                                     <barButtonItem title="Home" image="homekit" catalog="system" id="txd-Vm-g7f">
@@ -618,7 +621,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Next">
+                                <buttonConfiguration key="configuration" style="gray" title="Complete">
                                     <fontDescription key="titleFontDescription" name="Galvji-Bold" family="Galvji" pointSize="10"/>
                                     <color key="baseBackgroundColor" red="0.99587291479999995" green="0.85618466010000005" blue="0.587645427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
@@ -969,7 +972,7 @@ Id ius solet laudem cotidieque, nam dicat concludaturque id. Putant utroque duo 
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="T6Y-2p-PPA"/>
-        <segue reference="zAB-Wh-lBi"/>
+        <segue reference="YFD-Jn-kKy"/>
         <segue reference="TT5-kM-Wm6"/>
         <segue reference="buV-AL-eWY"/>
         <segue reference="3bo-Ar-PE0"/>
